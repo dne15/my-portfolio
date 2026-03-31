@@ -9,6 +9,26 @@ const projects = [
         bg: "bg-neutral-800",
         label: "OUTFIT SELECTOR",
         imageRight: false,
+    }, 
+
+        {
+        id: 2,
+        title: "Quiz Game",
+        description: "Built with School of Code",
+        tags: ["REACT", "TAILWIND"],
+        bg: "bg-neutral-800",
+        label: "OUTFIT SELECTOR",
+        imageRight: true,
+    }, 
+
+        {
+        id: 3,
+        title: "Automation Test Suite",
+        description: "End-to-end automated test suite written in JavaScript using Cypress. Covers critical user journeys with structured, maintainable test cases.",
+        tags: ["REACT", "TAILWIND"],
+        bg: "bg-neutral-800",
+        label: "OUTFIT SELECTOR",
+        imageRight: false,
     }
 ]
 
@@ -20,10 +40,12 @@ function Projects() {
                 {projects.map((project) => (
                     <div key={project.id} className="mb-32 border-b border-neutral-200 pb-32 last:border-0 last:mb-0">
                         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-                            <div className={`aspect-[4/3] ${project.bg} flex items-center justify-center ${project.imageRight ? 'order-1 md:order-2' : ''}`}>
+                            {/* Image */}
+                            <div className={`aspect-4/3 ${project.bg} flex items-center justify-center ${project.imageRight ? 'order-1 md:order-2' : 'order-1'}`}>
                             <span className="text-white text-sm tracking-wider">{project.label}</span>
                             </div>
-                            <div className={project.imageRight ? 'order-2 md:order-1' : ''}>
+                            {/* Text */}
+                            <div className={project.imageRight ? 'order-2 md:order-1' : 'order-2'}>
                                 <h3 className="text-5xl mb-6 font-medium">{project.title}</h3>
                                 <p className="text-neutral-600 mb-6 leading-relaxed">{project.description}</p>
                                 <div className="flex flex-wrap gap-3 mb-8">
