@@ -15,12 +15,12 @@ const projects = [
 function Projects() {
     return (
         <section id="projects" className="py-20 lg:py-32">
-            <div className="max-w 7xl mx-auto px-6 lg:px-12">
+            <div className="max-w-7xl mx-auto px-6 lg:px-12">
                 <h2 className="text-sm tracking-widest mb-16 text-neutral-600">SELECTED WORKS</h2>
                 {projects.map((project) => (
                     <div key={project.id} className="mb-32 border-b border-neutral-200 pb-32 last:border-0 last:mb-0">
-                        <div className="grid md:grid-cols-2 gap-12 lg-gap-20 items-center">
-                            <div className={`aspect-[4/3 ${project.bg} flex items-center justify-center ${project.imageRight ? 'order-1 md:order-2' : ''}`}>
+                        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+                            <div className={`aspect-[4/3] ${project.bg} flex items-center justify-center ${project.imageRight ? 'order-1 md:order-2' : ''}`}>
                             <span className="text-white text-sm tracking-wider">{project.label}</span>
                             </div>
                             <div className={project.imageRight ? 'order-2 md:order-1' : ''}>
