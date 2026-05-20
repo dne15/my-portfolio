@@ -11,7 +11,9 @@ function About() {
                     Where compliance meets code
                     {/* Passion meets precision */}
                     </h3>
-
+                
+                <img src="/cover-photo.png" alt='cover photo' />
+                <br />
                 <p className="text-sm tracking-widest text-neutral-600 leading-relaxed">
                     After a decade in the mortgage, protection and compliance industry, I made the 
                     decision to move into tech. Bringing with me a sharp eye for detail, a structured way 
@@ -38,7 +40,6 @@ function About() {
                     Currently seeking opportunities to collaborate with forward-thinking teams and contribute to projects that challenge convention. */}
                 
                 <br />
-                <img src="/cover-photo.png" alt='cover photo' />
                 <br/>
                 <h2 className="text-sm tracking-widest mb-8 text-neutral-600">EXPERTISE</h2>
                 <ul className="grid grid-cols-2 gap-4">

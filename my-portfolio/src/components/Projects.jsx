@@ -1,27 +1,33 @@
-//mapping over data 
+import tamagotchiImg from '../assets/tamagotchiImg.png'
+import dressCodeImg from '../assets/dressCodeImg.png'
 
 const projects = [
     {
         id: 1,
-        title: "Outfit Selector",
-        description: "An outfit selector built with React",
+        title: "Dress Code",
+        description: "An outfit selector built with React.",
         tags: ["REACT", "TAILWIND"],
         bg: "bg-neutral-800",
         label: "OUTFIT SELECTOR",
         imageRight: false,
-    }, 
+        image: dressCodeImg,
+        url: "https://outfit-selector.vercel.app/",
 
-        {
+    },
+
+    {
         id: 2,
-        title: "Quiz Game",
-        description: "Built with School of Code",
-        tags: ["REACT", "TAILWIND"],
+        title: "Tamagotchi",
+        description: "A browser-based virtual pet game.",
+        tags: ["HTML", "JAVASCRIPT", "CSS"],
         bg: "bg-neutral-800",
-        label: "OUTFIT SELECTOR",
+        label: "TAMAGOTCHI",
         imageRight: true,
-    }, 
+        image: tamagotchiImg,
+        url: "https://dne15.github.io/tamagotchi/",
+    },
 
-        {
+    {
         id: 3,
         title: "Automation Test Suite",
         description: "End-to-end automated test suite written in JavaScript using Cypress. Covers critical user journeys with structured, maintainable test cases.",
@@ -41,8 +47,11 @@ function Projects() {
                     <div key={project.id} className="mb-32 border-b border-neutral-200 pb-32 last:border-0 last:mb-0">
                         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
                             {/* Image */}
-                            <div className={`aspect-4/3 ${project.bg} flex items-center justify-center ${project.imageRight ? 'order-1 md:order-2' : 'order-1'}`}>
-                            <span className="text-white text-sm tracking-wider">{project.label}</span>
+                            <div className={`aspect-4/3 ${project.bg} flex items-center justify-center ${project.imageRight ? 'order-1 md:order-2' : 'order-1'} overflow-hidden`}>
+                                {project.image
+                                    ? <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                                    : <span className="text-white text-sm tracking-wider">{project.label}</span>
+                                }
                             </div>
                             {/* Text */}
                             <div className={project.imageRight ? 'order-2 md:order-1' : 'order-2'}>
@@ -53,9 +62,11 @@ function Projects() {
                                         <span key={tag} className="text-xs tracking-wider border border-neutral-300 px-4 py-2">{tag}</span>
                                     ))}
                                 </div>
-                                <a href='#' className="inline-flex items-center text-sm tracking-wider hover:text-neutral-600">
-                                    VIEW PROJECT <i className="fa-solid fa-arrow-right ml-3"></i>
-                                </a>
+                                {project.url && (
+                                    <a href={project.url} target="_blank" rel="noreferrer" className="inline-flex items-center text-sm tracking-wider hover:text-neutral-600">
+                                        VIEW PROJECT <i className="fa-solid fa-arrow-right ml-3"></i>
+                                    </a>
+                                )}
                             </div>
                         </div>
                     </div>
