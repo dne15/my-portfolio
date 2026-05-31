@@ -1,5 +1,6 @@
 import tamagotchiImg from '../assets/tamagotchiImg.png'
 import dressCodeImg from '../assets/dressCodeImg.png'
+import todoListImg from '../assets/todoListImg.png'
 
 const projects = [
     {
@@ -29,13 +30,27 @@ const projects = [
 
     {
         id: 3,
+        title: "To Do List",
+        description: "A browser-based to do list",
+        tags: ["HTML", "JAVASCRIPT", "CSS"],
+        bg: "bg-neutral-800",
+        label: "AUTOMATION TEST SUITE",
+        imageRight: false,
+        image: todoListImg,
+        url: "https://dne15.github.io/to-do-list/",
+
+    },
+
+        {
+        id: 4,
         title: "Automation Test Suite",
         description: "End-to-end automated test suite written in JavaScript using Cypress. Covers critical user journeys with structured, maintainable test cases.",
-        tags: ["REACT", "TAILWIND"],
+        tags: ["JAVASCRIPT", "CYPRESS"],
         bg: "bg-neutral-800",
-        label: "OUTFIT SELECTOR",
+        label: "AUTOMATION TEST SUITE",
         imageRight: false,
     }
+
 ]
 
 function Projects() {
