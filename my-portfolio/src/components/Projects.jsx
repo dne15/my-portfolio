@@ -1,6 +1,7 @@
 import tamagotchiImg from '../assets/tamagotchiImg.png'
 import dressCodeImg from '../assets/dressCodeImg.png'
 import todoListImg from '../assets/todoListImg.png'
+import autoImg from '../assets/autoImg.png'
 
 const projects = [
     {
@@ -49,6 +50,8 @@ const projects = [
         bg: "bg-neutral-800",
         label: "AUTOMATION TEST SUITE",
         imageRight: false,
+        image: autoImg,
+
     }
 
 ]
