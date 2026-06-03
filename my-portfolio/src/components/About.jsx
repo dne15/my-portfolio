@@ -30,7 +30,7 @@ function About() {
                 <p className="text-sm tracking-widest text-neutral-600 leading-relaxed">
                     In November 2025 I made my break into tech with my first role as a QA Engineer in the transport
                     industry. Here I carried out both manual testing and automation using JavaScript and Cypress. 
-                    I'm now looking to take the next step into a software development or business analyst role. 
+                    I'm now looking to take the next step into a software development or Project Management role. 
                     Somewhere I can bring together my technical skills and my professional background.
                 </p>
 
